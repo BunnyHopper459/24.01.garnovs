@@ -1,8 +1,9 @@
-text=input("Ievadi tekstu: ")
-x = int(text.count("o")+text.count("O"))
-if x > 0:
-  text=text.replace("o","%")
-  text=text.replace("O","%")
+text=str(input("Ievadi tekstu: "))
+x = len(text)
+if x > 1:
+  text = text.upper()
+  text = "".join(list(reversed(text)))
   print(text)
-elif x == 0:
-  print("Burts nav atrasts!")
+else:
+  print("Teksts ir parāk īss!")
+ 
